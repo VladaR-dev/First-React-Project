@@ -1,7 +1,7 @@
 import React from "react";
 
 const Counter = () => {
-  const count = 0;
+  let count = 0;
   const formatCount = () => (count === 0 ? "empty" : count);
 
   const getBadgeClasses = () => {
@@ -10,10 +10,17 @@ const Counter = () => {
     return classes;
   };
 
+  const handleIncrement = () => {
+    count += 1;
+    console.log(count);
+  };
+
   return (
     <>
       <span className={getBadgeClasses()}>{formatCount()}</span>
-      <button className="btn btn-primary btn-sm m-2">+</button>
+      <button className="btn btn-primary btn-sm m-2" onClick={handleIncrement}>
+        +
+      </button>
     </>
   );
 };
