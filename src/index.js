@@ -9,5 +9,4 @@ const App = () => {
   return <Counter />;
 };
 
-const root = createRoot(document.querySelector("#root"));
-root.render(<App />);
+createRoot(document.querySelector("#root")).render(<App />);
